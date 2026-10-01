@@ -73,3 +73,21 @@ body {
   height: auto;
   opacity: 0.9;
 }
+
+@media (max-width: 600px) {
+    .site-logo {
+        height: auto;
+        width: 60vw; /* scales nicely on phones */
+        max-width: 300px; /* prevents giant logos on tablets */
+    }
+    .tagline {
+        margin: 0.5rem 0;
+    }
+
+    .logo-block {
+        margin-bottom: 1rem;
+    }
+    .landing-footer .vob-badge {
+        width: 90px;
+    }
+}
