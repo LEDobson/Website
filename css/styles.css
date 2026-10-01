@@ -80,6 +80,9 @@ body {
 }
 
 @media (max-width: 600px) {
+    .site-header {
+        padding: 0.5rem 0; /* tighter red banner */
+    }
     .site-logo {
         height: auto;
         width: 60vw; /* scales nicely on phones */
