@@ -1,0 +1,75 @@
+/* === Base Layout, Typography & Background === */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  background-image: url("../assets/images/graph.png");
+  background-repeat: repeat;
+  background-size: auto;
+  color: #333;
+  text-align: center;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Header (Red Banner) === */
+.site-header {
+  background-color: #a62639;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* === Logo === */
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-logo {
+  width: auto;
+  height: 25vh;
+  object-fit: contain;
+}
+
+.hero .site-logo {
+  height: 50vh;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  letter-spacing: 0.05rem;
+}
+
+/* === Tagline === */
+.tagline {
+  font-style: italic;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+/* === Footer === */
+.landing-footer {
+  margin-top: auto;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.landing-footer .vob-badge {
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
+}
