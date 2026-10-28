@@ -83,6 +83,12 @@ body {
     color: #777;
     font-size: 0.95rem;
 }
+.landing-footer .vob-badge {
+    width: 240px;
+    height: auto;
+    opacity: 0.9;
+}
+
 
 .coming-soon {
     margin: 0 0 0.75rem;
@@ -112,5 +118,9 @@ body {
 
     .tagline {
         font-size: 1.05rem;
+    }
+
+    .landing-footer .vob-badge {
+        width: 90px;
     }
 }
