@@ -1,115 +1,130 @@
 /* === Base Layout, Typography & Background === */
-body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  background-image: url("../assets/images/graph.jpg");
-  background-repeat: repeat;
-  background-size: auto;
-  color: #333;
-  text-align: center;
 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+    background-color: #f9f9f9;
+    background-image: url("../assets/images/graph.jpg");
+    background-repeat: repeat;
+    background-size: auto;
 }
 
 /* === Header (Red Banner) === */
+
 .site-header {
-  background-color: #a62639;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #a62639;
+    color: white;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
+    Size logo by WIDTH only.
+    This keeps it from becoming gigantic on tall screens.
+*/
 .site-logo {
+    width: 33vw;
+    max-width: 500px;
+    min-width: 180px;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
 
-/* === Logo === */
-.logo-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.site-logo {
-  width: auto;
-  height: 25vh;
-  object-fit: contain;
-}
-
-.hero .site-logo {
-  height: 50vh;
-}
-
-
 .logo-text {
-  font-size: 1.4rem;
-  margin-top: 0.5rem;
-  color: #fff;
-  letter-spacing: 0.05rem;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    color: #fff;
+}
+
+/* === Main Body === */
+
+.site-body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
 }
 
 .message-block {
     display: flex;
     flex-direction: column;
-    gap: 0.05rem;
+    gap: 0.15rem;
 }
 
-/* === Tagline === */
 .tagline {
-  font-style: italic;
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.coming-soon {
-    margin-top: 1rem;
-}
-
-.cert-note {
-    margin-top: 0.5rem;
+    margin: 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #777;
+    line-height: 1.3;
 }
 
 /* === Footer === */
+
 .landing-footer {
-  margin-top: auto;
-  padding-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem;
-  text-align: center;
-  color: #777;
-  font-size: 0.9rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.coming-soon {
+    margin: 0 0 1rem 0;
+}
+
+.cert-note {
+    margin: 0 0 1rem 0;
+}
+
+.copyright {
+    margin: 0;
 }
 
 .landing-footer .vob-badge {
-  width: 180px;
-  height: auto;
-  opacity: 0.9;
+    width: 180px;
+    height: auto;
+    opacity: 0.9;
 }
 
+/* === Mobile === */
+
 @media (max-width: 600px) {
+
     .site-header {
-        padding: 0.5rem 0; /* tighter red banner */
-    }
-    .site-logo {
-        height: auto;
-        width: 60vw; /* scales nicely on phones */
-        max-width: 300px; /* prevents giant logos on tablets */
-    }
-    .tagline {
-        margin: 0.5rem 0;
+        padding: 0.5rem 0;
     }
 
-    .logo-block {
-        margin-bottom: 1rem;
+    .site-logo {
+        width: 60vw;
+        max-width: 300px;
+        min-width: 150px;
     }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .tagline {
+        font-size: 1.05rem;
+    }
+
     .landing-footer .vob-badge {
         width: 90px;
     }
